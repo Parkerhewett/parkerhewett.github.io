@@ -90,30 +90,6 @@ h2 {
     src: url(../fonts/ProximaNova-Bold.otf);
 }
 
-/* preloader section */
-.preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99999;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: row nowrap;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background: none repeat scroll 0 0 #fff;
-    background: none repeat scroll 0 0 #f9f9f9;
-}
-
 .sk-spinner-wordpress.sk-spinner {
     background-color: #666666;
     width: 30px;
