@@ -36,11 +36,15 @@ body {
 /*
  * Header
  */
+header {
+    background-color: #47475e;
+    padding: 20px;
+    border-radius: 15px;
+}
 
 .nav-masthead .nav-link {
     color: rgba(255, 255, 255, .5);
     border-bottom: .25rem solid transparent;
-    
 }
 
     .nav-masthead .nav-link:hover,
@@ -53,6 +57,6 @@ body {
     }
 
 .nav-masthead .active {
-    color: lightskyblue;
+    color: #459fbb;
     border-bottom-color: rgb(128, 128, 128);
 }
