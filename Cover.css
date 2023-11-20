@@ -14,11 +14,11 @@ body {
     h1  {
         font-size: 3.5rem;
         text-align: center;
+        padding-top: 50px;
 
     }
 
     img {
-        align-content: center;
         width: 150px;
         height: 150px;
         border-radius: 50%;
@@ -36,6 +36,7 @@ body {
 .nav-masthead .nav-link {
     color: rgba(255, 255, 255, .5);
     border-bottom: .25rem solid transparent;
+    font-size: 15px;
 }
 
     .nav-masthead .nav-link:hover,
