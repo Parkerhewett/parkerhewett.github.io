@@ -2,12 +2,7 @@
  * Base structure
  */
 
-img {
-    float: right;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
+
 
 body {
     text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
@@ -18,10 +13,17 @@ body {
 }
     h1  {
         font-size: 3.5rem;
+        text-align: center;
     }
 
+    img {
+        align-content: center;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
 .cover-container {
-    max-width: 75em;
+    max-width: max-content;
 }
 
 
