@@ -60,3 +60,15 @@ footer {
     border-radius: 20px;
     background-color: #47475e
 }
+
+.Box {
+    background-color: #47475e;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+    .Box:hover {
+        transform: scale(1.1);
+        background-color: #676794;
+    }
