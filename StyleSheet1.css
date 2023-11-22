@@ -57,9 +57,9 @@ background-color: #47475e;
     margin-bottom: 20px;
 }
 
-    .Box:hover {
+.Box:hover {
         transform: scale(1.1);
         background-color: #676794;
-    }
+}
 
 
