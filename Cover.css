@@ -55,8 +55,6 @@ header {
     border-bottom-color: rgb(128, 128, 128);
 }
 
-.footer{    
-    margin-top: auto;
-    padding: 20px;
-    text-align: center;
+footer {
+    padding-top: 300px;
 }
