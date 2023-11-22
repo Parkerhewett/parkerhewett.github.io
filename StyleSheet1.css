@@ -39,13 +39,16 @@ header {
     }
 
 .nav-masthead .active {
-    color: #459fbb;
+    color: ##68a7fb;
     border-bottom-color: rgb(128, 128, 128);
 }
 
 footer {
-    padding-top: 100px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #47475e
 }
+
 
 .Box{
 background-color: #47475e;
@@ -53,5 +56,10 @@ background-color: #47475e;
     border-radius: 15px;
     margin-bottom: 20px;
 }
+
+    .Box:hover {
+        transform: scale(1.1);
+        background-color: #676794;
+    }
 
 
