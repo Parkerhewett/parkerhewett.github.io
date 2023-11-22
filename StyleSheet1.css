@@ -44,7 +44,14 @@ header {
 }
 
 footer {
-    padding-top: 300px;
+    padding-top: 100px;
+}
+
+.box{
+background-color: #47475e;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
 }
 
 
