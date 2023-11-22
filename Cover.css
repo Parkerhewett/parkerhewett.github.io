@@ -62,13 +62,14 @@ footer {
 }
 
 .Box {
-    background-color: #47475e;
-    padding: 20px;
+    background-color: #565681;
+    padding: 5px;
+    padding-top: 10px;
     border-radius: 15px;
-    margin-bottom: 20px;
+    margin-top: 5px;
 }
 
     .Box:hover {
         transform: scale(1.1);
-        background-color: #676794;
+        background-color: #7373b4;
     }
