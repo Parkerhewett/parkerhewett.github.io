@@ -6,8 +6,8 @@ body {
     h3 {
         font-size: 25px;
     }
-    p {
-        
+    #main {
+        font-size: 20px;
     }
     main {
         padding-left: 20px;
