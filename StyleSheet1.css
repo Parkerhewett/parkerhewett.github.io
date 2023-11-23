@@ -51,7 +51,7 @@ footer {
 
 
 .Box{
-background-color: #47475e;
+    background-color: #47475e;
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 20px;
@@ -62,9 +62,16 @@ background-color: #47475e;
         background-color: #676794;
 }
 
-#contact{
-    color: lightgrey;
-    font-size: 15px;
+.contactbox {
+    background-color: #565681;
+    padding: 5px;
+    padding-top: 10px;
+    border-radius: 15px;
+    margin-top: 5px;
+    color: #acacac;
 }
 
-
+    .contactbox:hover {
+        transform: scale(1.1);
+        background-color: #63639f;
+    }
