@@ -1,6 +1,6 @@
 body {
-    background-color: #334;
-    color: aliceblue;
+    background-color: white;
+    color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
     h3 {
@@ -19,7 +19,8 @@ body {
 }
 
 header {
-    background-color: #47475e;
+    background-color: white;
+    color: black;
     padding: 20px;
     border-radius: 15px;
 }
@@ -39,20 +40,20 @@ header {
     }
 
 .nav-masthead .active {
-    color: ##68a7fb;
+    color: #e0e0e0;
     border-bottom-color: rgb(128, 128, 128);
 }
 
 footer {
     padding: 20px;
     border-radius: 20px;
-    background-color: #47475e;
+    background-color: #e0e0e0;
     margin-top: 10px;
 }
 
 
-.Box{
-    background-color: #47475e;
+.Box {
+    background-color: #e0e0e0;
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 20px;
@@ -64,24 +65,23 @@ footer {
 }
 
 .contactbox {
-    background-color: #565681;
+    background-color: #d0d0d0;
     padding: 5px;
     padding-top: 10px;
     border-radius: 15px;
     margin-top: 5px;
     color: #acacac;
     font-size: 15px;
-
 }
 
     .contactbox:hover {
         transform: scale(1.1);
-        background-color: #63639f;
+        background-color: #d0d0d0;
     }
 
 .Jobs {
-    padding: 15px; 
-    background-color: #47475e; 
+    padding: 15px;
+    background-color: #d0d0d0;
     border-radius: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
