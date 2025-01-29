@@ -44,13 +44,13 @@ header, footer {
 
 /* Adjust navigation links for better contrast */
 .nav-masthead .nav-link {
-    color: rgba(255, 255, 255, .5);
+    color: black;
     border-bottom: .25rem solid transparent;
 }
 
     .nav-masthead .nav-link:hover,
     .nav-masthead .nav-link:focus {
-        border-bottom-color: rgba(0, 0, 0, 0.25);
+        border-bottom-color: rgba(255, 255, 255, .25);
     }
 
     .nav-masthead .nav-link + .nav-link {
@@ -64,8 +64,10 @@ header, footer {
 
 /* Adjust footer text and box styles */
 footer .Box {
-    background-color: #e0e0e0; /* Light gray for subtle contrast */
-    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    margin-top: 10px;
 }
 
 .Box:hover {
