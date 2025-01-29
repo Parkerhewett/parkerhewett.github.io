@@ -35,24 +35,21 @@ body {
 /*
  * Header
  */
-header {
-    background-color: #47475e;
-    padding: 20px;
+header, footer {
+    background-color: white; /* Change header and footer to white */
+    color: black; /* Ensure text is readable */
     border-radius: 15px;
+    padding: 20px;
 }
 
+/* Adjust navigation links for better contrast */
 .nav-masthead .nav-link {
-    color: rgba(255, 255, 255, .5);
-    border-bottom: .25rem solid transparent;
+    color: black;
 }
 
     .nav-masthead .nav-link:hover,
     .nav-masthead .nav-link:focus {
-        border-bottom-color: rgba(255, 255, 255, .25);
-    }
-
-    .nav-masthead .nav-link + .nav-link {
-        margin-left: 1rem;
+        border-bottom-color: rgba(0, 0, 0, 0.25);
     }
 
 .nav-masthead .active {
@@ -60,22 +57,12 @@ header {
     border-bottom-color: rgb(128, 128, 128);
 }
 
-footer {
-    padding: 20px;
-    border-radius: 20px;
-    background-color: #47475e
+/* Adjust footer text and box styles */
+footer .Box {
+    background-color: #e0e0e0; /* Light gray for subtle contrast */
+    color: black;
 }
 
-.Box {
-    background-color: #565681;
-    padding: 5px;
-    padding-top: 10px;
-    border-radius: 15px;
-    margin-top: 5px;
-    color: #acacac;
-}
-
-    .Box:hover {
-        transform: scale(1.1);
-        background-color: #63639f;
-    }
+.Box:hover {
+    background-color: #d0d0d0;
+} background-color: #63639f;
