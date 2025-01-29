@@ -18,15 +18,16 @@ body {
     max-width: 75em;
 }
 
-header {
-    background-color: white;
-    color: black;
-    padding: 20px;
+header, footer {
+    background-color: white; /* Change header and footer to white */
+    color: black; /* Ensure text is readable */
     border-radius: 15px;
+    padding: 20px;
 }
 
+/* Adjust navigation links for better contrast */
 .nav-masthead .nav-link {
-    color: rgba(255, 255, 255, .5);
+    color: black;
     border-bottom: .25rem solid transparent;
 }
 
@@ -40,17 +41,17 @@ header {
     }
 
 .nav-masthead .active {
-    color: #e0e0e0;
+    color: #459fbb;
     border-bottom-color: rgb(128, 128, 128);
 }
 
-footer {
+/* Adjust footer text and box styles */
+footer .Box {
     padding: 20px;
     border-radius: 10px;
     background-color: #e0e0e0;
     margin-top: 10px;
 }
-
 
 .Box {
     background-color: #e0e0e0;
