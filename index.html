@@ -254,4 +254,18 @@
         // Mobile Navigation
         const hamburger = document.getElementById('hamburger');
         const mobileNav = document.getElementById('mobileNav');
-        const mobileOverlay
+        const mobileOverlay = document.getElementById('mobileOverlay');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+        });
+
+        mobileOverlay.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+        });
+
+    </script>
+   </body>
+</html>
