@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Projects & Experience - Parker Hewett</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Experience - Parker Hewett</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-87S8FCDZHT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-87S8FCDZHT');
+    </script>
+</head>
+
+
+<body>
     <!-- HEADER / NAVIGATION -->
     <header class="main-header">
         <div class="header-container">
@@ -454,20 +466,19 @@
                     <a href="Parker_Hewett_Resume.pdf" class="btn btn-primary">
                         Download Resume (PDF)
                     </a>
-                </div>                  
+                </div>
 
-                    <iframe
-                        src="Parker_Hewett_Resume.pdf"
+                <iframe src="Parker_Hewett_Resume.pdf"
                         class="resume-embed"
                         title="Parker Hewett Resume">
-                    </iframe>
-                    <p style="margin-top: 1rem; color: #777; font-size: 0.875rem;">
-                        <a href="Parker_Hewett_Resume.pdf" target="_blank" style="color: #459fbb;">
-                            Can't view the PDF? Click here to open in a new tab ↗
-                        </a>
-                    </p>
-                </div>
+                </iframe>
+                <p style="margin-top: 1rem; color: #777; font-size: 0.875rem;">
+                    <a href="Parker_Hewett_Resume.pdf" target="_blank" style="color: #459fbb;">
+                        Can't view the PDF? Click here to open in a new tab ↗
+                    </a>
+                </p>
             </div>
+        </div>
         </div>
     </section>
 
@@ -497,7 +508,7 @@
 
     <!-- JAVASCRIPT -->
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-     <script>
+    <script>
         // Contact Dropdown
         const contactBtn = document.getElementById('contactBtn');
         const contactMenu = document.getElementById('contactMenu');
@@ -564,33 +575,33 @@
             }
         }
 
-                        // Filter Functionality
-                        const filterButtons = document.querySelectorAll('.filter-btn');
-                        const projectCards = document.querySelectorAll('.project-card');
+        // Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
 
-                        filterButtons.forEach(button => {
-                            button.addEventListener('click', () => {
-                                // Update active button
-                                filterButtons.forEach(btn => btn.classList.remove('active'));
-                                button.classList.add('active');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
 
-                                const filter = button.getAttribute('data-filter');
+                const filter = button.getAttribute('data-filter');
 
-                                // Filter projects
-                                projectCards.forEach(card => {
-                                    if (filter === 'all') {
-                                        card.style.display = 'block';
-                                    } else {
-                                        const categories = card.getAttribute('data-category');
-                                        if (categories && categories.includes(filter)) {
-                                            card.style.display = 'block';
-                                        } else {
-                                            card.style.display = 'none';
-                                        }
-                                    }
-                                });
-                            });
-                        });
-     </script>
-  </body >
-</html >
+                // Filter projects
+                projectCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const categories = card.getAttribute('data-category');
+                        if (categories && categories.includes(filter)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
