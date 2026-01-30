@@ -1,87 +1,584 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Projects - Parker</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="StyleSheet1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Experience - Parker Hewett</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Nav Bar section -->
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="mb-auto">
-            <div>
-                <h3 class="float-md-start mb-0">Recent Projects</h3>
-                <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="index">Home</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="about">About</a>
-                    <a class="nav-link fw-bold py-1 px-0 active" href="projects">Projects</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="skillset">Skills</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="Employmenthist">Past Employment</a>
-                </nav>
-            </div>
-        </header>
-    </div>
+    <!-- HEADER / NAVIGATION -->
+    <header class="main-header">
+        <div class="header-container">
+            <h1 class="site-title">Parker Hewett</h1>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link active">Projects & Experience</a>
+                
+                <!-- Contact Dropdown -->
+                <div class="contact-dropdown">
+                    <button class="contact-btn" id="contactBtn">
+                        Contact <span>▼</span>
+                    </button>
+                    <div class="contact-dropdown-menu" id="contactMenu">
+                        <a href="mailto:pehewett@hotmail.com" target="_blank">
+                            <span>📧 Personal Email</span>
+                            <span class="external-icon">↗</span>
+                        </a>
+                        <a href="mailto:parker.hewett@ou.edu" target="_blank">
+                            <span>🎓 OU Email</span>
+                            <span class="external-icon">↗</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/parker-hewettou/" target="_blank">
+                            <span>💼 LinkedIn</span>
+                            <span class="external-icon">↗</span>
+                        </a>
+                        <a href="https://github.com/Parkerhewett" target="_blank">
+                            <span>💻 GitHub</span>
+                            <span class="external-icon">↗</span>
+                        </a>
+                        <div class="contact-dropdown-hint">Opens in a new tab</div>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Mobile Hamburger -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
 
-    <main class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <div class="row">
-            <div class="">
-                <div class="about">
-                    <h3 class="accent">List of Projects</h3>
-                    <p id="main">
-                        Worked on building a Database for a fictional Taco Truck company in my Database class. Used ERDs to design the database, 
-                        used MySQL to implement it and created a full 40+ page document of all the steps that me and my team made along the way 
-                        for developing the database.
+    <!-- Mobile Navigation -->
+    <nav class="nav-mobile" id="mobileNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link active">Projects & Experience</a>
+        
+        <div class="contact-section">
+            <div class="contact-label">CONTACT</div>
+            <a href="mailto:pehewett@hotmail.com" target="_blank" class="nav-link">
+                📧 Personal Email ↗
+            </a>
+            <a href="mailto:parker.hewett@ou.edu" target="_blank" class="nav-link">
+                🎓 OU Email ↗
+            </a>
+            <a href="https://www.linkedin.com/in/parker-hewettou/" target="_blank" class="nav-link">
+                💼 LinkedIn ↗
+            </a>
+            <a href="https://github.com/Parkerhewett" target="_blank" class="nav-link">
+                💻 GitHub ↗
+            </a>
+        </div>
+    </nav>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- PROJECTS SECTION -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projects & Experience</h2>
+                <p>A comprehensive look at my work, achievements, and professional journey</p>
+            </div>
+
+            <!-- FILTER BUTTONS -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="data-systems">Data Systems</button>
+                <button class="filter-btn" data-filter="reporting">Reporting & Dashboards</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
+                <button class="filter-btn" data-filter="work-history">Work History</button>
+            </div>
+
+            <!-- PROJECT CARDS -->
+            <div id="projectsContainer">
+                
+                <!-- SharePoint Data Catalog Project -->
+                <div class="project-card" data-category="data-systems">
+                    <div class="project-header" onclick="toggleExpand(this)">
+                        <div>
+                            <h3 class="project-title">SharePoint Data Catalog Implementation</h3>
+                            <div class="project-meta">
+                                <span class="project-tag">SharePoint</span>
+                                <span class="project-tag">Data Management</span>
+                                <span class="project-tag">SageNet</span>
+                            </div>
+                        </div>
+                        <button class="expand-btn">
+                            <span class="expand-text">Expand</span>
+                            <span class="expand-icon">+</span>
+                        </button>
+                    </div>
+                    <p class="project-summary">
+                        <strong>Problem:</strong> Company-wide information scattered across difficult-to-update Wiki system, limiting accessibility and efficiency.
                     </p>
-                    <br />
-                    <p id="main">
-                        During my time at SageNet in Tulsa, OK, another intern and I worked on several projects. The one on which we achieved the most success
-                        was organizing the company's files using Microsoft SharePoint. We created a SharePoint site for each customer that SageNet serves, allowing
-                        any department to access and gather information efficiently. Creating these SharePoint sites was especially beneficial because it involved
-                        transferring information from a company-wide Wiki that was challenging to add and update, to SharePoint, where adding and updating
-                        information became more straightforward.
+                    <p class="project-summary">
+                        <strong>Result:</strong> Implemented comprehensive SharePoint solution enabling seamless cross-department information access and streamlined updates.
                     </p>
-                    <br />
-                    <p id="main">
-                        You can also check out my Github page to see other projects that I have worked on while at OU, <span style="text-decoration: none"> <a href="https://github.com/Parkerhewett" target="_blank">Here</a></span>
+                    
+                    <div class="project-details">
+                        <div class="project-details-content">
+                            <h4>Context</h4>
+                            <p>SageNet managed customer information across multiple departments using an outdated Wiki system that was challenging to navigate, update, and maintain. This created bottlenecks in information retrieval and collaboration.</p>
+                            
+                            <h4>My Responsibility</h4>
+                            <p>As an Industrial Engineer Intern, I led the design and implementation of a new SharePoint-based filing system in collaboration with another intern. I was responsible for architecture planning, site creation, data migration, and user training.</p>
+                            
+                            <h4>Challenges</h4>
+                            <ul>
+                                <li>Migrating data from legacy Wiki to SharePoint without data loss</li>
+                                <li>Creating a standardized structure usable across all departments</li>
+                                <li>Ensuring user adoption and training across teams</li>
+                                <li>Maintaining security and access controls</li>
+                            </ul>
+                            
+                            <h4>Approach</h4>
+                            <ol>
+                                <li>Analyzed existing Wiki structure and user needs across departments</li>
+                                <li>Designed scalable SharePoint architecture with customer-specific sites</li>
+                                <li>Created templates and documentation for consistent implementation</li>
+                                <li>Migrated existing data systematically with quality checks</li>
+                                <li>Conducted training sessions for department stakeholders</li>
+                            </ol>
+                            
+                            <h4>Outcome & Impact</h4>
+                            <p>Successfully deployed SharePoint solution company-wide, significantly improving document accessibility and update workflows. The new system enabled any department to quickly access customer information, reducing information retrieval time and improving cross-functional collaboration.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database Project -->
+                <div class="project-card" data-category="data-systems">
+                    <div class="project-header" onclick="toggleExpand(this)">
+                        <div>
+                            <h3 class="project-title">Taco Truck Database System</h3>
+                            <div class="project-meta">
+                                <span class="project-tag">MySQL</span>
+                                <span class="project-tag">Database Design</span>
+                                <span class="project-tag">ERD</span>
+                            </div>
+                        </div>
+                        <button class="expand-btn">
+                            <span class="expand-text">Expand</span>
+                            <span class="expand-icon">+</span>
+                        </button>
+                    </div>
+                    <p class="project-summary">
+                        <strong>Problem:</strong> Design and implement a comprehensive database solution for a fictional taco truck company's operations.
                     </p>
+                    <p class="project-summary">
+                        <strong>Result:</strong> Delivered complete database with ERD documentation, MySQL implementation, and 40+ page comprehensive development guide.
+                    </p>
+                    
+                    <div class="project-details">
+                        <div class="project-details-content">
+                            <h4>Context</h4>
+                            <p>Class project requiring end-to-end database development for a taco truck business, including inventory management, sales tracking, employee records, and customer data.</p>
+                            
+                            <h4>My Responsibility</h4>
+                            <p>Team member responsible for ERD design, MySQL implementation, query optimization, and comprehensive documentation of the development process.</p>
+                            
+                            <h4>Challenges</h4>
+                            <ul>
+                                <li>Designing normalized database structure to minimize redundancy</li>
+                                <li>Creating relationships between multiple entities (inventory, sales, employees, locations)</li>
+                                <li>Writing efficient queries for common business operations</li>
+                                <li>Documenting all design decisions and implementation steps</li>
+                            </ul>
+                            
+                            <h4>Approach</h4>
+                            <ol>
+                                <li>Conducted requirements analysis for taco truck operations</li>
+                                <li>Created Entity-Relationship Diagrams (ERD) for data modeling</li>
+                                <li>Normalized database to 3NF to ensure data integrity</li>
+                                <li>Implemented schema in MySQL with proper constraints and indexes</li>
+                                <li>Developed queries for inventory tracking, sales reports, and analytics</li>
+                                <li>Created comprehensive documentation covering all development phases</li>
+                            </ol>
+                            
+                            <h4>Outcome & Impact</h4>
+                            <p>Successfully delivered fully functional database with complete 40+ page documentation. Project demonstrated proficiency in database design principles, SQL implementation, and technical documentation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAP/ServiceNow Asset Tracking -->
+                <div class="project-card" data-category="automation data-systems">
+                    <div class="project-header" onclick="toggleExpand(this)">
+                        <div>
+                            <h3 class="project-title">SAP & ServiceNow Asset Tracking System</h3>
+                            <div class="project-meta">
+                                <span class="project-tag">SAP</span>
+                                <span class="project-tag">ServiceNow</span>
+                                <span class="project-tag">Process Optimization</span>
+                            </div>
+                        </div>
+                        <button class="expand-btn">
+                            <span class="expand-text">Expand</span>
+                            <span class="expand-icon">+</span>
+                        </button>
+                    </div>
+                    <p class="project-summary">
+                        <strong>Problem:</strong> Improve asset tracking and inventory management processes at SageNet.
+                    </p>
+                    <p class="project-summary">
+                        <strong>Result:</strong> Utilized SAP and ServiceNow to enhance operational efficiency and support procurement processes.
+                    </p>
+                    
+                    <div class="project-details">
+                        <div class="project-details-content">
+                            <h4>Context</h4>
+                            <p>SageNet required better visibility into company assets and inventory to support provisioning, project management, and procurement teams.</p>
+                            
+                            <h4>My Responsibility</h4>
+                            <p>Worked with SAP and ServiceNow platforms to track assets, develop standardized product catalogs, and improve data accuracy across inventory systems.</p>
+                            
+                            <h4>Approach</h4>
+                            <ul>
+                                <li>Learned SAP and ServiceNow platforms through hands-on training</li>
+                                <li>Collaborated with provisioning and inventory teams to understand requirements</li>
+                                <li>Developed standardized product catalog for consistent tracking</li>
+                                <li>Implemented processes to maintain data accuracy</li>
+                            </ul>
+                            
+                            <h4>Outcome & Impact</h4>
+                            <p>Enhanced operational efficiency through improved asset tracking and standardized inventory processes, supporting better decision-making across procurement and project management teams.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Network Optimization at NGL -->
+                <div class="project-card" data-category="automation">
+                    <div class="project-header" onclick="toggleExpand(this)">
+                        <div>
+                            <h3 class="project-title">Network Infrastructure Optimization</h3>
+                            <div class="project-meta">
+                                <span class="project-tag">Cisco</span>
+                                <span class="project-tag">Network Systems</span>
+                                <span class="project-tag">NGL Energy</span>
+                            </div>
+                        </div>
+                        <button class="expand-btn">
+                            <span class="expand-text">Expand</span>
+                            <span class="expand-icon">+</span>
+                        </button>
+                    </div>
+                    <p class="project-summary">
+                        <strong>Problem:</strong> Optimize network performance through strategic hardware decommissioning and configuration.
+                    </p>
+                    <p class="project-summary">
+                        <strong>Result:</strong> Successfully decommissioned legacy Cisco equipment and configured new hardware, improving network reliability.
+                    </p>
+                    
+                    <div class="project-details">
+                        <div class="project-details-content">
+                            <h4>Context</h4>
+                            <p>NGL Energy Partners needed to upgrade network infrastructure by retiring legacy equipment and deploying new configurations.</p>
+                            
+                            <h4>My Responsibility</h4>
+                            <p>IT Intern responsible for decommissioning Cisco routers and switches, configuring new laptops, and collaborating across Network, Cybersecurity, and Service Desk teams.</p>
+                            
+                            <h4>Challenges</h4>
+                            <ul>
+                                <li>Ensuring zero downtime during equipment transitions</li>
+                                <li>Properly documenting decommissioned hardware</li>
+                                <li>Coordinating with multiple technical teams</li>
+                                <li>Maintaining security compliance during hardware changes</li>
+                            </ul>
+                            
+                            <h4>Approach</h4>
+                            <ol>
+                                <li>Worked with Network team to identify equipment for decommissioning</li>
+                                <li>Followed proper procedures for secure hardware retirement</li>
+                                <li>Imaged and configured laptops for new and existing employees</li>
+                                <li>Collaborated with Cybersecurity to ensure compliance</li>
+                                <li>Supported asset management initiatives</li>
+                            </ol>
+                            
+                            <h4>Outcome & Impact</h4>
+                            <p>Optimized network performance through successful hardware lifecycle management, improved employee onboarding with streamlined laptop configuration, and maintained security standards throughout the process.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WORK HISTORY SECTION -->
+                <div class="project-card" data-category="work-history">
+                    <h3 class="project-title" style="color: #459fbb; margin-bottom: 2rem;">Work History</h3>
+                    
+                    <!-- SageNet -->
+                    <div style="margin-bottom: 3rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                            <h4 style="margin: 0; font-size: 1.25rem;">Industrial Engineer Intern</h4>
+                            <span style="color: #777; font-weight: 600;">May 2023 - March 2024</span>
+                        </div>
+                        <p style="color: #459fbb; margin-bottom: 1rem; font-weight: 600;">SageNet, Tulsa, OK</p>
+                        <ul style="color: #555; line-height: 1.8;">
+                            <li>Designed and implemented a SharePoint-based filing system, improving document accessibility across all departments</li>
+                            <li>Utilized SAP and ServiceNow for asset tracking, enhancing operational efficiency and inventory management</li>
+                            <li>Developed a standardized product catalog to support inventory and procurement processes</li>
+                            <li>Shadowed and collaborated with teams in provisioning, project management, and inventory management</li>
+                            <li>Created documentation and training materials for new systems</li>
+                        </ul>
+                        <button class="expand-btn" onclick="toggleWorkExpand(this)" style="margin-top: 1rem;">
+                            <span>Read more</span>
+                            <span>+</span>
+                        </button>
+                        <div class="project-details">
+                            <div class="project-details-content">
+                                <p>During my time at SageNet, I gained comprehensive experience in industrial engineering processes, data management, and cross-functional collaboration. The SharePoint implementation project was particularly impactful, as it required me to understand the needs of multiple departments and create a solution that served them all effectively. Working with SAP and ServiceNow provided valuable exposure to enterprise resource planning and IT service management platforms used in large organizations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NGL Energy Partners -->
+                    <div style="margin-bottom: 3rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                            <h4 style="margin: 0; font-size: 1.25rem;">IT Intern</h4>
+                            <span style="color: #777; font-weight: 600;">June 2022 - August 2022</span>
+                        </div>
+                        <p style="color: #459fbb; margin-bottom: 1rem; font-weight: 600;">NGL Energy Partners, Tulsa, OK</p>
+                        <ul style="color: #555; line-height: 1.8;">
+                            <li>Decommissioned Cisco routers and switches, optimizing network performance and infrastructure</li>
+                            <li>Imaged and configured laptops for new and existing employees, ensuring smooth onboarding processes</li>
+                            <li>Collaborated with Network, Cybersecurity, and Service Desk teams to resolve technical issues</li>
+                            <li>Supported asset management initiatives, ensuring hardware compliance and proper documentation</li>
+                            <li>Gained hands-on experience with enterprise network systems and security protocols</li>
+                        </ul>
+                        <button class="expand-btn" onclick="toggleWorkExpand(this)" style="margin-top: 1rem;">
+                            <span>Read more</span>
+                            <span>+</span>
+                        </button>
+                        <div class="project-details">
+                            <div class="project-details-content">
+                                <p>This internship provided foundational IT experience in a corporate energy sector environment. I learned how to work within established IT infrastructure, follow security protocols, and coordinate with specialized technical teams. The hardware lifecycle management experience was particularly valuable for understanding the practical aspects of network operations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Freelance Photography -->
+                    <div style="margin-bottom: 3rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                            <h4 style="margin: 0; font-size: 1.25rem;">Freelance Photographer</h4>
+                            <span style="color: #777; font-weight: 600;">March 2023 - Present</span>
+                        </div>
+                        <p style="color: #459fbb; margin-bottom: 1rem; font-weight: 600;">Self-Employed</p>
+                        <ul style="color: #555; line-height: 1.8;">
+                            <li>Planned and organized photo sessions, selecting optimal locations to meet client preferences</li>
+                            <li>Maintained strong customer relationships by understanding client needs and delivering seamless experiences</li>
+                            <li>Edited photos using Adobe Lightroom, ensuring professional and polished final deliverables</li>
+                            <li>Delivered high-quality final images within one week, ensuring client satisfaction</li>
+                            <li>Managed all aspects of small business operations including scheduling, invoicing, and client communications</li>
+                        </ul>
+                        <button class="expand-btn" onclick="toggleWorkExpand(this)" style="margin-top: 1rem;">
+                            <span>Read more</span>
+                            <span>+</span>
+                        </button>
+                        <div class="project-details">
+                            <div class="project-details-content">
+                                <p>Running a freelance photography business has taught me valuable skills in client management, project planning, and delivering quality work under deadlines. The attention to detail required in photography editing translates well to data quality work, and managing client expectations mirrors the stakeholder communication needed in technical roles.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leadership Experience -->
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                            <h4 style="margin: 0; font-size: 1.25rem;">Treasurer</h4>
+                            <span style="color: #777; font-weight: 600;">2022 - 2023</span>
+                        </div>
+                        <p style="color: #459fbb; margin-bottom: 1rem; font-weight: 600;">Phi Delta Theta Fraternity, University of Oklahoma</p>
+                        <ul style="color: #555; line-height: 1.8;">
+                            <li>Managed $200K annual budget for events, operations, and house management</li>
+                            <li>Implemented financial tracking systems to improve transparency and accountability</li>
+                            <li>Communicated financial updates to alumni, members, and national organization</li>
+                            <li>Developed financial reports and forecasts for executive board decision-making</li>
+                            <li>Ensured compliance with university and national fraternity financial policies</li>
+                        </ul>
+                        <button class="expand-btn" onclick="toggleWorkExpand(this)" style="margin-top: 1rem;">
+                            <span>Read more</span>
+                            <span>+</span>
+                        </button>
+                        <div class="project-details">
+                            <div class="project-details-content">
+                                <p>Serving as Treasurer provided invaluable experience in financial management, stakeholder communication, and organizational leadership. Managing a six-figure budget required careful planning, transparent reporting, and effective communication with diverse stakeholders including members, alumni, and university officials.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUME SECTION -->
+    <section class="content-section" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="resume-section">
+                <h2 style="margin-top: 0; color: #459fbb;">Resume</h2>
+                <p style="color: #555; margin-bottom: 2rem;">
+                    Download my resume or view it directly below. For the best experience on mobile devices, 
+                    use the download button.
+                </p>
+                
+                <div class="resume-buttons">
+                    <a href="#" class="btn btn-primary" onclick="alert('Resume PDF will be available soon!'); return false;">
+                        Download Resume (PDF)
+                    </a>
+                </div>
+
+                <!-- Placeholder for resume embed -->
+                <div style="background: white; padding: 3rem; border-radius: 8px; text-align: center; border: 2px dashed #dee2e6;">
+                    <p style="color: #999; margin-bottom: 1rem; font-size: 1.125rem;">
+                        📄 Resume PDF Viewer
+                    </p>
+                    <p style="color: #999; font-style: italic;">
+                        Upload your resume PDF and it will be embedded here using an iframe
+                    </p>
+                    <p style="color: #999; font-size: 0.875rem; margin-top: 1rem;">
+                        Code ready to implement once you provide the PDF file
+                    </p>
+                    <!--
+                    Uncomment when resume PDF is ready:
+                    <iframe 
+                        src="your-resume.pdf" 
+                        class="resume-embed"
+                        title="Parker Hewett Resume">
+                    </iframe>
+                    <p style="margin-top: 1rem; color: #777; font-size: 0.875rem;">
+                        <a href="your-resume.pdf" target="_blank" style="color: #459fbb;">
+                            Can't view the PDF? Click here to open in a new tab ↗
+                        </a>
+                    </p>
+                    -->
                 </div>
             </div>
         </div>
-        <footer class="mt-auto text-white-50">
-            <div class="container text-center">
-                <h3>Contact</h3>
-                <div class="row align-items-center">
-                    <div class="col">
-                        <a href="mailto:pehewett@hotmail.com" target="_blank" style="text-decoration: none">
-                            <div class="contactbox">
-                                <p>Personal Email:</p>
-                                <p>pehewett@hotmail.com</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="mailto:parker.hewett@ou.edu" target="_blank" style="text-decoration: none">
-                            <div class="contactbox">
-                                <p>OU Email:</p>
-                                <p>Parker.Hewett@ou.edu</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="https://www.linkedin.com/in/parker-hewettou/" target="_blank" style="text-decoration: none">
-                            <div class="contactbox">
-                                <p>LinkedIn Profile:</p>
-                                <p>ParkerHewettOU</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <h3>Contact</h3>
+            <div class="footer-links">
+                <a href="mailto:pehewett@hotmail.com" target="_blank" class="footer-link-box">
+                    <p>Personal Email</p>
+                    <p>pehewett@hotmail.com</p>
+                </a>
+                <a href="https://www.linkedin.com/in/parker-hewettou/" target="_blank" class="footer-link-box">
+                    <p>LinkedIn</p>
+                    <p>ParkerHewettOU</p>
+                </a>
+                <a href="https://github.com/Parkerhewett" target="_blank" class="footer-link-box">
+                    <p>GitHub</p>
+                    <p>Parkerhewett</p>
+                </a>
             </div>
-        </footer>
+            <div class="footer-bottom">
+                <p>© 2025 Parker Hewett | Last updated: January 2025</p>
+            </div>
+        </div>
+    </footer>
 
-    </main>
+    <!-- JAVASCRIPT -->
+    <script>
+        // Contact Dropdown
+        const contactBtn = document.getElementById('contactBtn');
+        const contactMenu = document.getElementById('contactMenu');
+        const contactDropdown = document.querySelector('.contact-dropdown');
 
+        contactBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            contactDropdown.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!contactDropdown.contains(e.target)) {
+                contactDropdown.classList.remove('active');
+            }
+        });
+
+        // Mobile Navigation
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+        });
+
+        mobileOverlay.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+        });
+
+        // Project Card Expand/Collapse
+        function toggleExpand(header) {
+            const card = header.closest('.project-card');
+            const details = card.querySelector('.project-details');
+            const expandBtn = card.querySelector('.expand-btn');
+            const expandText = expandBtn.querySelector('.expand-text');
+            const expandIcon = expandBtn.querySelector('.expand-icon');
+            
+            if (details.classList.contains('expanded')) {
+                details.classList.remove('expanded');
+                expandText.textContent = 'Expand';
+                expandIcon.textContent = '+';
+            } else {
+                details.classList.add('expanded');
+                expandText.textContent = 'Collapse';
+                expandIcon.textContent = '−';
+            }
+        }
+
+        // Work Experience Expand/Collapse
+        function toggleWorkExpand(button) {
+            const details = button.nextElementSibling;
+            const spans = button.querySelectorAll('span');
+            
+            if (details.classList.contains('expanded')) {
+                details.classList.remove('expanded');
+                spans[0].textContent = 'Read more';
+                spans[1].textContent = '+';
+            } else {
+                details.classList.add('expanded');
+                spans[0].textContent = 'Show less';
+                spans[1].textContent = '−';
+            }
+        }
+
+        // Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                // Filter projects
+                projectCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const categories = card.getAttribute('data-category');
+                        if (categories && categories.includes(filter)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

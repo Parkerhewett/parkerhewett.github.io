@@ -1,88 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Parker Hewett</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-
-    <!-- stylesheet css -->
-    <link rel="stylesheet" href="Cover.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parker Hewett - Business Analytics Professional</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="mb-auto">
-            <div>
-                <h3 class="float-md-start mb-0">Welcome To My Personal Page</h3>
-                <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="index">Home</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="about">About</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="projects">Projects</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="skillset">Skills</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="Employmenthist">Past Employment</a>
-                </nav>
-            </div>
-        </header>
-
-        <main class="px-3">
-            <h1>Parker Hewett</h1>
-            <img src="ProHeadshot.jpg" alt="Profile Picture"/> 
-            <p class="lead">
-                My name is Parker Hewett, and I am a recent graduate of the Price College of Business with a degree in Management Information Systems (MIS). 
-                I am currently pursuing a Master of Science in Business Analytics at the University of Oklahoma.
-            </p>
-            <p class="lead">
-                In the summer of 2023, I interned as an Industrial Engineer at SageNet in Tulsa, OK, where I gained hands-on experience in Project Management,
-                Supply Chain Management, provisioning, and Customer Support. One of my key projects involved initiating and developing a data catalog in SharePoint,
-                collaborating closely with another intern to enhance data organization and accessibility.
-            </p>
-            <p class="lead">
-                Beyond academics and professional experiences, I earned the rank of Eagle Scout in 2020, demonstrating my commitment to leadership and personal
-                development. During my time at the University of Oklahoma, I was actively involved in Phi Delta Theta fraternity, where I served as treasurer,
-                documenting financial processes and managing a budget of approximately $200K for events and house operations.
-            </p>
-            <p class="lead">
-                I am passionate about using technology and data-driven insights to solve complex problems. This webpage serves as a portfolio of my experiences,
-                projects, and skills. Feel free to explore and reach out if you'd like to connect!
-            </p>
-
-        </main>
-
-        <footer class="mt-auto text-white-50">
-            <div class="container text-center"> 
-                <h3>Contact</h3>
-                <div class="row align-items-center">
-                    <div class="col">
-                        <a href="mailto:pehewett@hotmail.com"  target="_blank" style="text-decoration: none">
-                            <div class="Box">
-                                <p>Personal Email:</p>
-                                <p>pehewett@hotmail.com</p>
-                            </div>
+    <!-- HEADER / NAVIGATION -->
+    <header class="main-header">
+        <div class="header-container">
+            <h1 class="site-title">Parker Hewett</h1>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects & Experience</a>
+                
+                <!-- Contact Dropdown -->
+                <div class="contact-dropdown">
+                    <button class="contact-btn" id="contactBtn">
+                        Contact <span>▼</span>
+                    </button>
+                    <div class="contact-dropdown-menu" id="contactMenu">
+                        <a href="mailto:pehewett@hotmail.com" target="_blank">
+                            <span>📧 Personal Email</span>
+                            <span class="external-icon">↗</span>
                         </a>
-                    </div>
-                    <div class="col">
-                        <a href="mailto:parker.hewett@ou.edu" target="_blank" style="text-decoration: none">
-                            <div class="Box">
-                                <p>OU Email:</p>
-                                <p>Parker.Hewett@ou.edu</p>
-                            </div>
+                        <a href="mailto:parker.hewett@ou.edu" target="_blank">
+                            <span>🎓 OU Email</span>
+                            <span class="external-icon">↗</span>
                         </a>
-                    </div>
-                    <div class="col">
-                        <a href="https://www.linkedin.com/in/parker-hewettou/" target="_blank" style="text-decoration: none">
-                            <div class="Box">
-                                <p>LinkedIn Profile:</p>
-                                <p>ParkerHewettOU</p>
-                            </div>
+                        <a href="https://www.linkedin.com/in/parker-hewettou/" target="_blank">
+                            <span>💼 LinkedIn</span>
+                            <span class="external-icon">↗</span>
                         </a>
+                        <a href="https://github.com/Parkerhewett" target="_blank">
+                            <span>💻 GitHub</span>
+                            <span class="external-icon">↗</span>
+                        </a>
+                        <div class="contact-dropdown-hint">Opens in a new tab</div>
                     </div>
                 </div>
+            </nav>
+            
+            <!-- Mobile Hamburger -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="nav-mobile" id="mobileNav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects & Experience</a>
+        
+        <div class="contact-section">
+            <div class="contact-label">CONTACT</div>
+            <a href="mailto:pehewett@hotmail.com" target="_blank" class="nav-link">
+                📧 Personal Email ↗
+            </a>
+            <a href="mailto:parker.hewett@ou.edu" target="_blank" class="nav-link">
+                🎓 OU Email ↗
+            </a>
+            <a href="https://www.linkedin.com/in/parker-hewettou/" target="_blank" class="nav-link">
+                💼 LinkedIn ↗
+            </a>
+            <a href="https://github.com/Parkerhewett" target="_blank" class="nav-link">
+                💻 GitHub ↗
+            </a>
+        </div>
+    </nav>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <img src="ProHeadshot.jpg" alt="Parker Hewett Professional Headshot" class="hero-image">
+                <h1 class="hero-title">Parker Hewett</h1>
+                <p class="hero-subtitle">Business Analytics | Data Systems | Process Optimization</p>
+                <p class="hero-description">
+                    Graduate student in Business Analytics with hands-on experience in data systems, 
+                    reporting, and process optimization. Passionate about leveraging technology to 
+                    drive business value and solve complex problems.
+                </p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">View Projects</a>
+                    <a href="#" class="btn btn-secondary" onclick="alert('Resume download will be available soon!'); return false;">Download Resume</a>
+                </div>
             </div>
-        </footer>
+        </div>
+        <div class="scroll-cue">
+            <span style="font-size: 2rem;">↓</span>
+        </div>
+    </section>
 
-    </div>
+    <!-- CORE SKILLS SECTION -->
+    <section class="content-section" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Core Skills</h2>
+                <p>Technologies and competencies I work with daily</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-pill">SharePoint</div>
+                <div class="skill-pill">SAP</div>
+                <div class="skill-pill">ServiceNow</div>
+                <div class="skill-pill">SQL / MySQL</div>
+                <div class="skill-pill">Python</div>
+                <div class="skill-pill">Data Visualization</div>
+                <div class="skill-pill">Process Optimization</div>
+                <div class="skill-pill">Project Management</div>
+                <div class="skill-pill">Supply Chain</div>
+                <div class="skill-pill">Network Systems</div>
+            </div>
+        </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!-- FEATURED HIGHLIGHTS -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Highlights</h2>
+                <p>Key achievements and contributions</p>
+            </div>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h3>📊 Data Catalog Implementation</h3>
+                    <p>
+                        Designed and implemented a company-wide SharePoint-based data catalog at SageNet, 
+                        improving document accessibility and information retrieval across all departments.
+                    </p>
+                </div>
+                <div class="highlight-card">
+                    <h3>💰 Financial Leadership</h3>
+                    <p>
+                        Managed $200K annual budget as Treasurer of Phi Delta Theta, implementing 
+                        financial tracking systems and maintaining transparent communication with stakeholders.
+                    </p>
+                </div>
+                <div class="highlight-card">
+                    <h3>🔧 Technical Operations</h3>
+                    <p>
+                        Optimized network performance at NGL Energy Partners through strategic hardware 
+                        decommissioning and configuration, collaborating across Network and Cybersecurity teams.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREVIEW SECTION -->
+    <section class="content-section" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore More</h2>
+            </div>
+            <div class="preview-grid">
+                <a href="about.html" class="preview-card">
+                    <div class="preview-card-header">
+                        <h3>👤 About Me</h3>
+                    </div>
+                    <div class="preview-card-body">
+                        <p>
+                            Learn about my professional background, education at the University of Oklahoma, 
+                            and the experiences that shaped my career path.
+                        </p>
+                        <span class="preview-card-link">Read More →</span>
+                    </div>
+                </a>
+
+                <a href="projects.html" class="preview-card">
+                    <div class="preview-card-header">
+                        <h3>💼 Projects & Experience</h3>
+                    </div>
+                    <div class="preview-card-body">
+                        <p>
+                            Explore detailed case studies of my work in data systems, automation, 
+                            reporting, and my complete employment history.
+                        </p>
+                        <span class="preview-card-link">View Portfolio →</span>
+                    </div>
+                </a>
+
+                <a href="#" class="preview-card" onclick="document.getElementById('contactBtn').click(); return false;">
+                    <div class="preview-card-header">
+                        <h3>📬 Get In Touch</h3>
+                    </div>
+                    <div class="preview-card-body">
+                        <p>
+                            Connect with me via email, LinkedIn, or GitHub. I'm always open to 
+                            discussing new opportunities and collaborations.
+                        </p>
+                        <span class="preview-card-link">Contact Me →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <h3>Contact</h3>
+            <div class="footer-links">
+                <a href="mailto:pehewett@hotmail.com" target="_blank" class="footer-link-box">
+                    <p>Personal Email</p>
+                    <p>pehewett@hotmail.com</p>
+                </a>
+                <a href="https://www.linkedin.com/in/parker-hewettou/" target="_blank" class="footer-link-box">
+                    <p>LinkedIn</p>
+                    <p>ParkerHewettOU</p>
+                </a>
+                <a href="https://github.com/Parkerhewett" target="_blank" class="footer-link-box">
+                    <p>GitHub</p>
+                    <p>Parkerhewett</p>
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Parker Hewett | Last updated: January 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Contact Dropdown
+        const contactBtn = document.getElementById('contactBtn');
+        const contactMenu = document.getElementById('contactMenu');
+        const contactDropdown = document.querySelector('.contact-dropdown');
+
+        contactBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            contactDropdown.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!contactDropdown.contains(e.target)) {
+                contactDropdown.classList.remove('active');
+            }
+        });
+
+        // Mobile Navigation
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+        });
+
+        mobileOverlay.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+        });
+    </script>
 </body>
-
 </html>

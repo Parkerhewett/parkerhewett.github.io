@@ -1,81 +1,277 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <title>About - Parker</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="StyleSheet1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Parker Hewett</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Nav Bar section -->
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="mb-auto">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <div>
-                <h3 class="float-md-start mb-0">About Me</h3>
-                <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="index">Home</a>
-                    <a class="nav-link fw-bold py-1 px-0 active" href="about">About</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="projects">Projects</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="skillset">Skills</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="Employmenthist">Past Employment</a>
-                </nav>
-            </div>
-        </header>
-    </div>
-
-    <main class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <div class="about">
-            <h3>Intro</h3>
-            <p id="main">My name is Parker Hewett, and I am a graduate of the University of Oklahoma’s Price College of Business with a Bachelor’s in 
-            Management Information Systems (MIS). I am currently pursuing a Master of Science in Business Analytics, where I continue to refine my skills in 
-            Python, SQL, data visualization, and process optimization.</p>
-            <p id="main">I have gained valuable experience through internships and leadership roles. As an Industrial Engineer Intern at SageNet, 
-            I developed a company-wide data catalog in SharePoint, improving information accessibility. I also worked with SAP and ServiceNow for asset 
-            tracking and contributed to inventory and procurement processes. Additionally, as an IT Intern at NGL Energy Partners, I collaborated with 
-            Network and Cybersecurity teams, configured hardware, and optimized network performance.</p>
-            <p id="main">Beyond my technical experience, I have a strong foundation in leadership and financial management. As Treasurer of Phi Delta Theta, 
-            I managed a $200K annual budget, implemented financial tracking systems, and communicated financial updates to alumni and members. I also earned 
-            the rank of Eagle Scout, leading service projects and mentoring younger scouts.</p>
-            <p id="main">In addition to my professional and leadership experiences, I am a freelance photographer, planning and executing photoshoots 
-            while delivering high-quality, professionally edited images</p>
-            <p id="main">I am passionate about leveraging technology and analytics to drive business value and solve complex problems. 
-            Feel free to explore my portfolio and reach out to connect!</p>
+    <!-- HEADER / NAVIGATION -->
+    <header class="main-header">
+        <div class="header-container">
+            <h1 class="site-title">Parker Hewett</h1>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="projects.html" class="nav-link">Projects & Experience</a>
+                
+                <!-- Contact Dropdown -->
+                <div class="contact-dropdown">
+                    <button class="contact-btn" id="contactBtn">
+                        Contact <span>▼</span>
+                    </button>
+                    <div class="contact-dropdown-menu" id="contactMenu">
+                        <a href="mailto:pehewett@hotmail.com" target="_blank">
+                            <span>📧 Personal Email</span>
+                            <span class="external-icon">↗</span>
+                        </a>
+                        <a href="mailto:parker.hewett@ou.edu" target="_blank">
+                            <span>🎓 OU Email</span>
+                            <span class="external-icon">↗</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/parker-hewettou/" target="_blank">
+                            <span>💼 LinkedIn</span>
+                            <span class="external-icon">↗</span>
+                        </a>
+                        <a href="https://github.com/Parkerhewett" target="_blank">
+                            <span>💻 GitHub</span>
+                            <span class="external-icon">↗</span>
+                        </a>
+                        <div class="contact-dropdown-hint">Opens in a new tab</div>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Mobile Hamburger -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
+    </header>
 
-        <footer class="mt-auto text-white-50" id="contact">
-            <div class="container text-center">
-                <h3>Contact</h3>
-                <div class="row align-items-center">
-                    <div class="col" style="font-size: 12px; color: lightgray">
-                        <a href="mailto:pehewett@hotmail.com" target="_blank" style="text-decoration: none">
-                            <div class="contactbox">
-                                <p>Personal Email:</p>
-                                <p>pehewett@hotmail.com</p>
-                            </div>
-                        </a>
+    <!-- Mobile Navigation -->
+    <nav class="nav-mobile" id="mobileNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="projects.html" class="nav-link">Projects & Experience</a>
+        
+        <div class="contact-section">
+            <div class="contact-label">CONTACT</div>
+            <a href="mailto:pehewett@hotmail.com" target="_blank" class="nav-link">
+                📧 Personal Email ↗
+            </a>
+            <a href="mailto:parker.hewett@ou.edu" target="_blank" class="nav-link">
+                🎓 OU Email ↗
+            </a>
+            <a href="https://www.linkedin.com/in/parker-hewettou/" target="_blank" class="nav-link">
+                💼 LinkedIn ↗
+            </a>
+            <a href="https://github.com/Parkerhewett" target="_blank" class="nav-link">
+                💻 GitHub ↗
+            </a>
+        </div>
+    </nav>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- PROFESSIONAL BACKGROUND SECTION -->
+    <section class="content-section">
+        <div class="container">
+            <div class="about-section">
+                <h2>Professional Background</h2>
+                
+                <p>
+                    I'm Parker Hewett, a graduate of the University of Oklahoma's Price College of Business 
+                    with a Bachelor's in Management Information Systems (MIS). Currently, I'm pursuing a 
+                    Master of Science in Business Analytics, where I continue to refine my skills in Python, 
+                    SQL, data visualization, and process optimization.
+                </p>
+
+                <p>
+                    My day-to-day work focuses on leveraging technology and data to solve business challenges. 
+                    I thrive in environments where I can combine technical expertise with strategic thinking 
+                    to improve processes, enhance data accessibility, and drive operational efficiency.
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #459fbb;">Tools & Technologies</h3>
+                <div class="skills-grid" style="margin-bottom: 2rem;">
+                    <div class="skill-pill">SharePoint</div>
+                    <div class="skill-pill">SAP</div>
+                    <div class="skill-pill">ServiceNow</div>
+                    <div class="skill-pill">SQL / MySQL</div>
+                    <div class="skill-pill">Python</div>
+                    <div class="skill-pill">C# / C</div>
+                    <div class="skill-pill">Adobe Lightroom</div>
+                    <div class="skill-pill">Microsoft Office Suite</div>
+                </div>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #459fbb;">Working Style</h3>
+                <p>
+                    I approach my work with a focus on reliability, accuracy, and clear documentation. 
+                    I believe in collaborative problem-solving and maintaining open communication with 
+                    stakeholders. Whether I'm developing a data catalog, optimizing network systems, or 
+                    managing budgets, I prioritize thoroughness and attention to detail.
+                </p>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #459fbb;">Career Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Master of Science in Business Analytics</h4>
+                        <div class="date">Present</div>
+                        <p>University of Oklahoma - Continuing education in advanced analytics, Python, and data-driven decision making</p>
                     </div>
-                    <div class="col">
-                        <a href="mailto:parker.hewett@ou.edu" target="_blank" style="text-decoration: none">
-                            <div class="contactbox">
-                                <p>OU Email:</p>
-                                <p>Parker.Hewett@ou.edu</p>
-                            </div>
-                        </a>
+                    
+                    <div class="timeline-item">
+                        <h4>Industrial Engineer Intern - SageNet</h4>
+                        <div class="date">May 2023 - March 2024</div>
+                        <p>Developed SharePoint data catalog, worked with SAP/ServiceNow for asset tracking, improved operational efficiency</p>
                     </div>
-                    <div class="col">
-                        <a href="https://www.linkedin.com/in/parker-hewettou/" target="_blank" style="text-decoration: none">
-                            <div class="contactbox">
-                                <p>LinkedIn Profile:</p>
-                                <p>ParkerHewettOU</p>
-                            </div>
-                        </a>
+                    
+                    <div class="timeline-item">
+                        <h4>Treasurer - Phi Delta Theta</h4>
+                        <div class="date">2022 - 2023</div>
+                        <p>Managed $200K annual budget, implemented financial tracking systems, maintained stakeholder communications</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>IT Intern - NGL Energy Partners</h4>
+                        <div class="date">June 2022 - August 2022</div>
+                        <p>Network optimization, hardware configuration, cross-team collaboration with Cybersecurity and Service Desk</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>Bachelor's in Management Information Systems</h4>
+                        <div class="date">Graduated 2024</div>
+                        <p>University of Oklahoma - Price College of Business</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>Eagle Scout</h4>
+                        <div class="date">2020</div>
+                        <p>Leadership development, service project management, mentoring</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #459fbb;">Career Direction</h3>
+                <p>
+                    I'm looking to grow into roles that allow me to work at the intersection of business 
+                    strategy and technology. I'm particularly interested in positions involving data analytics, 
+                    business intelligence, process optimization, and system implementation. I want to continue 
+                    developing my technical skills while expanding my understanding of how data-driven insights 
+                    can transform business operations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERSONAL SECTION -->
+    <section class="content-section" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="about-section">
+                <div class="personal-section">
+                    <h2 style="margin-top: 0;">Personal Glimpse</h2>
+                    
+                    <p>
+                        Beyond my professional work, I like to stay active and engaged in meaningful pursuits. 
+                        The same mindset I bring to optimizing systems and maintaining data integrity carries 
+                        over into how I approach personal projects and hobbies.
+                    </p>
+
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #459fbb;">Interests & Hobbies</h3>
+                    <ul style="color: #555; font-size: 1.125rem; line-height: 1.8; margin-bottom: 2rem;">
+                        <li><strong>Photography:</strong> I run a freelance photography business, planning shoots, working with clients, and editing images in Adobe Lightroom</li>
+                        <li><strong>Leadership & Service:</strong> Active involvement in organizations like Phi Delta Theta and achieving the rank of Eagle Scout</li>
+                        <li><strong>Continuous Learning:</strong> Always exploring new technologies, tools, and methods to improve my craft</li>
+                        <li><strong>Building & Optimizing:</strong> Whether it's systems, processes, or personal projects, I enjoy finding ways to make things work better</li>
+                    </ul>
+
+                    <p>
+                        I believe that the discipline, consistency, and attention to detail that drive my 
+                        personal interests are the same qualities that make me effective in professional settings. 
+                        Whether I'm capturing the perfect shot or implementing a data system, I'm focused on 
+                        delivering quality results.
+                    </p>
+
+                    <!-- Placeholder for photos - you can add actual images here -->
+                    <div style="margin-top: 2rem; padding: 2rem; background: white; border-radius: 8px; text-align: center;">
+                        <p style="color: #999; font-style: italic;">
+                            Photo gallery coming soon - showcasing photography work and personal projects
+                        </p>
+                        <!-- 
+                        Uncomment and replace with actual images when ready:
+                        <div class="photo-grid">
+                            <img src="photo1.jpg" alt="Photography work">
+                            <img src="photo2.jpg" alt="Leadership activities">
+                            <img src="photo3.jpg" alt="Personal projects">
+                            <img src="photo4.jpg" alt="Community involvement">
+                        </div>
+                        -->
                     </div>
                 </div>
             </div>
-        </footer>
-    </main>
+        </div>
+    </section>
 
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <h3>Contact</h3>
+            <div class="footer-links">
+                <a href="mailto:pehewett@hotmail.com" target="_blank" class="footer-link-box">
+                    <p>Personal Email</p>
+                    <p>pehewett@hotmail.com</p>
+                </a>
+                <a href="https://www.linkedin.com/in/parker-hewettou/" target="_blank" class="footer-link-box">
+                    <p>LinkedIn</p>
+                    <p>ParkerHewettOU</p>
+                </a>
+                <a href="https://github.com/Parkerhewett" target="_blank" class="footer-link-box">
+                    <p>GitHub</p>
+                    <p>Parkerhewett</p>
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Parker Hewett | Last updated: January 2025</p>
+            </div>
+        </div>
+    </footer>
 
+    <!-- JAVASCRIPT -->
+    <script>
+        // Contact Dropdown
+        const contactBtn = document.getElementById('contactBtn');
+        const contactMenu = document.getElementById('contactMenu');
+        const contactDropdown = document.querySelector('.contact-dropdown');
+
+        contactBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            contactDropdown.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!contactDropdown.contains(e.target)) {
+                contactDropdown.classList.remove('active');
+            }
+        });
+
+        // Mobile Navigation
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+        });
+
+        mobileOverlay.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+        });
+    </script>
 </body>
 </html>
