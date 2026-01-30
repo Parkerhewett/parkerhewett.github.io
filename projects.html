@@ -24,11 +24,11 @@
                         Contact <span>▼</span>
                     </button>
                     <div class="contact-dropdown-menu" id="contactMenu">
-                        <a href="/cdn-cgi/l/email-protection#adddc8c5c8dac8d9d9edc5c2d9c0ccc4c183cec2c0" target="_blank">
+                        <a href="pehewett@hotmail.com" target="_blank">
                             <span>📧 Personal Email</span>
                             <span class="external-icon">↗</span>
                         </a>
-                        <a href="/cdn-cgi/l/email-protection#95e5f4e7fef0e7bbfdf0e2f0e1e1d5fae0bbf0f1e0" target="_blank">
+                        <a href="parker.hewett@ou.edu" target="_blank">
                             <span>🎓 OU Email</span>
                             <span class="external-icon">↗</span>
                         </a>
@@ -62,10 +62,10 @@
 
         <div class="contact-section">
             <div class="contact-label">CONTACT</div>
-            <a href="/cdn-cgi/l/email-protection#c5b5a0ada0b2a0b1b185adaab1a8a4aca9eba6aaa8" target="_blank" class="nav-link">
+            <a href="pehewett@hotmail.com" target="_blank" class="nav-link">
                 📧 Personal Email ↗
             </a>
-            <a href="/cdn-cgi/l/email-protection#8bfbeaf9e0eef9a5e3eefceeffffcbe4fea5eeeffe" target="_blank" class="nav-link">
+            <a href="parker.hewett@ou.edu" target="_blank" class="nav-link">
                 🎓 OU Email ↗
             </a>
             <a href="https://www.linkedin.com/in/parker-hewettou/" target="_blank" class="nav-link">
@@ -451,7 +451,7 @@
                 </p>
 
                 <div class="resume-buttons">
-                    <a href="#" class="btn btn-primary" onclick="alert('Resume PDF will be available soon!'); return false;">
+                    <a href="Parker_Hewett_Resume.pdf" class="btn btn-primary">
                         Download Resume (PDF)
                     </a>
                 </div>                  
@@ -462,7 +462,7 @@
                         title="Parker Hewett Resume">
                     </iframe>
                     <p style="margin-top: 1rem; color: #777; font-size: 0.875rem;">
-                        <a href="your-resume.pdf" target="_blank" style="color: #459fbb;">
+                        <a href="Parker_Hewett_Resume.pdf" target="_blank" style="color: #459fbb;">
                             Can't view the PDF? Click here to open in a new tab ↗
                         </a>
                     </p>
@@ -476,7 +476,7 @@
         <div class="footer-content">
             <h3>Contact</h3>
             <div class="footer-links">
-                <a href="/cdn-cgi/l/email-protection#2252474a4755475656624a4d564f434b4e0c414d4f" target="_blank" class="footer-link-box">
+                <a href="pehewett@hotmail.com" target="_blank" class="footer-link-box">
                     <p>Personal Email</p>
                     <p><span class="__cf_email__" data-cfemail="b7c7d2dfd2c0d2c3c3f7dfd8c3dad6dedb99d4d8da">[email&#160;protected]</span></p>
                 </a>
@@ -564,23 +564,33 @@
             }
         }
 
-        // Filter Functionality
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
+                        // Filter Functionality
+                        const filterButtons = document.querySelectorAll('.filter-btn');
+                        const projectCards = document.querySelectorAll('.project-card');
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Update active button
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
+                        filterButtons.forEach(button => {
+                            button.addEventListener('click', () => {
+                                // Update active button
+                                filterButtons.forEach(btn => btn.classList.remove('active'));
+                                button.classList.add('active');
 
-                const filter = button.getAttribute('data-filter');
+                                const filter = button.getAttribute('data-filter');
 
-                // Filter projects
-                projectCards.forEach(card => {
-                    if (filter === 'all') {
-                        card.style.display = 'block';
-                    } else {
+                                // Filter projects
+                                projectCards.forEach(card => {
+                                    if (filter === 'all') {
+                                        card.style.display = 'block';
+                                    } else {
+                                        const categories = card.getAttribute('data-category');
+                                        if (categories && categories.includes(filter)) {
+                                            card.style.display = 'block';
+                                        } else {
+                                            card.style.display = 'none';
+                                        }
+                                    }
+                                });
+                            });
+                        });
      </script>
   </body >
 </html >
